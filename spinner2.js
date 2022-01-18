@@ -1,9 +1,9 @@
-const spinnerString = '\r| \r/ \r- \r\\ \r| \r/ \r- \r\\ \r|';
+const spinnerString = '| / - \\ | / - \\ |';
 const spinner = function(string) {
   let timeCounterSum = 100;
   for (let j = 0; j < string.length; j++) {
     setTimeout(() => {
-      process.stdout.write(string[j]);
+      process.stdout.write("\r" + string[j]);
       if (j === string.length - 1) {
         process.stdout.write("\n");
       }
